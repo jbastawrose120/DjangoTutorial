@@ -1,0 +1,12 @@
+.gameBoard, th, td{
+  border: 5px solid black;
+  font-size: 100px;
+}
+
+th, td{
+  /*padding: 50px;*/
+  height: 150px;
+  width: 150px;
+  text-align: center;
+
+}

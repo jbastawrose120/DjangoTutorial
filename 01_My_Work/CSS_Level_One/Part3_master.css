@@ -1,0 +1,36 @@
+/* classes always start with a period (.) */
+
+.firstDiv{
+  color: red;
+}
+
+.secondDiv{
+  color: blue;
+}
+
+/* classes use a #  */
+#singledout{
+  color: green;
+  text-decoration: line-through;
+}
+
+/* * selects every element on the page
+overrides class calls but not ID calls.  */
+
+*{
+  color:black;
+}
+
+/* to select all unordered list items that are next to an h3 */
+h3 + ul{
+  border: 4px dotted purple;
+}
+
+li a{
+  color: red;
+}
+
+li a[href="http://www.npr.org"]{
+  color: blue;
+  border: 5px solid orange;
+}

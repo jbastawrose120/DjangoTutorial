@@ -1,0 +1,13 @@
+li{
+  color: red;
+}
+
+/* classes are higher in the hierarchy than general tag calls  */
+.topitems{
+  color:blue;
+}
+
+/* id tags are higher than classes */
+#two{
+  border: 3px solid black;
+}

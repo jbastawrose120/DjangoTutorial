@@ -1,0 +1,20 @@
+body{
+  background: url(https://vignette.wikia.nocookie.net/thelennyface/images/2/24/Lenny_face.png);
+  
+}
+
+div{
+  background-color: blue; /*same thing as background */
+  border-color: orange;
+  border-width: 20px;
+  border-style: double;
+}
+
+p{
+  color:yellow;
+}
+
+span{
+  background: red;
+  color: black;
+}
