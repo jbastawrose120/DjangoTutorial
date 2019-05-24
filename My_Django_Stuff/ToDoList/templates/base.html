@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class='navbar mynav' role='navigation' id='navbar'>
+      <div class="container">
+        <a class='navbar-brand mynav' href="{% url 'home' %}">ToDoList</a>
+        <ul class="nav navbar-nav navbar-right">
+          {% if user.is_authenticated %}
+            <li><a href="{% url 'test' %}">Test Page</a></li>
+            <li><a href="{% url 'accounts:logout' %}">Log Out</a></li>
+          {% else %}
+            <li><a href="{% url 'thanks' %}">Thanks Page</a></li>
+            <li><a href="{% url 'accounts:login' %}">Log In</a></li>
+            <li><a href="{% url 'accounts:signup' %}">Sign Up</a></li>
+          {% endif %}
+        </ul>
+
+      </div>
+    </nav>
+
+    <div class="containter mycontent">
+      {% block content %}
+
+      {% endblock %}
+    </div>
+
+  </body>
+</html>
